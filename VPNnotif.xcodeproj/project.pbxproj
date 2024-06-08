@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C83B32792C14DA040014FD9A /* ShortcutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B32782C14DA040014FD9A /* ShortcutInfo.swift */; };
+		C85637702C14CE1800B1AF7C /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856376F2C14CE1800B1AF7C /* AppLabel.swift */; };
 		C8C0D1442C14B2F600B65B58 /* VPNnotifApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0D1432C14B2F600B65B58 /* VPNnotifApp.swift */; };
 		C8C0D1462C14B2F600B65B58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0D1452C14B2F600B65B58 /* ContentView.swift */; };
 		C8C0D1482C14B2F700B65B58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C0D1472C14B2F700B65B58 /* Assets.xcassets */; };
 		C8C0D14B2C14B2F700B65B58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C0D14A2C14B2F700B65B58 /* Preview Assets.xcassets */; };
+		C8C0D1532C14B30800B65B58 /* VPNChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0D1522C14B30800B65B58 /* VPNChecker.swift */; };
+		C8C0D1552C14B80400B65B58 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0D1542C14B80400B65B58 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C83B32782C14DA040014FD9A /* ShortcutInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutInfo.swift; sourceTree = "<group>"; };
+		C856376F2C14CE1800B1AF7C /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
 		C8C0D1402C14B2F600B65B58 /* VPNnotif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNnotif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C0D1432C14B2F600B65B58 /* VPNnotifApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNnotifApp.swift; sourceTree = "<group>"; };
 		C8C0D1452C14B2F600B65B58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C8C0D1472C14B2F700B65B58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8C0D14A2C14B2F700B65B58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8C0D14C2C14B2F700B65B58 /* VPNnotif.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VPNnotif.entitlements; sourceTree = "<group>"; };
+		C8C0D1522C14B30800B65B58 /* VPNChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNChecker.swift; sourceTree = "<group>"; };
+		C8C0D1542C14B80400B65B58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 			children = (
 				C8C0D1432C14B2F600B65B58 /* VPNnotifApp.swift */,
 				C8C0D1452C14B2F600B65B58 /* ContentView.swift */,
+				C83B32782C14DA040014FD9A /* ShortcutInfo.swift */,
+				C856376F2C14CE1800B1AF7C /* AppLabel.swift */,
+				C8C0D1542C14B80400B65B58 /* Constants.swift */,
+				C8C0D1522C14B30800B65B58 /* VPNChecker.swift */,
 				C8C0D1472C14B2F700B65B58 /* Assets.xcassets */,
 				C8C0D14C2C14B2F700B65B58 /* VPNnotif.entitlements */,
 				C8C0D1492C14B2F700B65B58 /* Preview Content */,
@@ -139,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85637702C14CE1800B1AF7C /* AppLabel.swift in Sources */,
 				C8C0D1462C14B2F600B65B58 /* ContentView.swift in Sources */,
 				C8C0D1442C14B2F600B65B58 /* VPNnotifApp.swift in Sources */,
+				C8C0D1532C14B30800B65B58 /* VPNChecker.swift in Sources */,
+				C8C0D1552C14B80400B65B58 /* Constants.swift in Sources */,
+				C83B32792C14DA040014FD9A /* ShortcutInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +295,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "VPN Status";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +324,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "VPN Status";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
