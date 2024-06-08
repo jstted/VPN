@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C83B32792C14DA040014FD9A /* ShortcutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B32782C14DA040014FD9A /* ShortcutInfo.swift */; };
 		C85637702C14CE1800B1AF7C /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856376F2C14CE1800B1AF7C /* AppLabel.swift */; };
+		C8984B882C150923008D5672 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = C8984B872C150923008D5672 /* LaunchAtLogin */; };
 		C8C0D1442C14B2F600B65B58 /* VPNnotifApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0D1432C14B2F600B65B58 /* VPNnotifApp.swift */; };
 		C8C0D1462C14B2F600B65B58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0D1452C14B2F600B65B58 /* ContentView.swift */; };
 		C8C0D1482C14B2F700B65B58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C0D1472C14B2F700B65B58 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8984B882C150923008D5672 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +99,9 @@
 			dependencies = (
 			);
 			name = VPNnotif;
+			packageProductDependencies = (
+				C8984B872C150923008D5672 /* LaunchAtLogin */,
+			);
 			productName = VPNnotif;
 			productReference = C8C0D1402C14B2F600B65B58 /* VPNnotif.app */;
 			productType = "com.apple.product-type.application";
@@ -125,6 +130,9 @@
 				Base,
 			);
 			mainGroup = C8C0D1372C14B2F600B65B58;
+			packageReferences = (
+				C8984B862C150923008D5672 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = C8C0D1412C14B2F600B65B58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -302,7 +310,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = space.jstted.VPNnotif;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -331,7 +340,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = space.jstted.VPNnotif;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -361,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C8984B862C150923008D5672 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C8984B872C150923008D5672 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8984B862C150923008D5672 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C8C0D1382C14B2F600B65B58 /* Project object */;
 }

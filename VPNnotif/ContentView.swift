@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LaunchAtLogin
 
 struct ContentView: View {
     @AppStorage("isActive") private var isConnected = false
@@ -30,7 +31,7 @@ struct ContentView: View {
                 Text(isConnected ? Constants.ConnectButton.disconnect : Constants.ConnectButton.connect)
             }
         )
-        
+        LaunchAtLogin.Toggle("Launch at login")
         Button(
             action: {
                 NSApplication.shared.terminate(nil)
